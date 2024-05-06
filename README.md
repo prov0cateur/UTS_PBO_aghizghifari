@@ -1,20 +1,17 @@
-Di bawah ini adalah penjelasan tambahan mengenai program tersebut.
- 1.
- Enkapsulasi: Setiap kelas memiliki variabel  privat  seperti alas, tinggi, sisi, dan tinggi.
- Artinya variabel-variabel tersebut tidak dapat diakses langsung dari luar kelas,  mengikuti prinsip enkapsulasi.
- Untuk mengakses dan mengubah nilai-nilai ini, gunakan metode penyetel dan pengambil yang disediakan.
- 2.
- Setter dan getter: Setiap kelas memiliki metode setter untuk menetapkan nilai variabel privat dan getter untuk mengambil nilai tersebut.
- Misalnya, kelas Triangle memiliki metode setBase() dan setHeight() untuk menyetel nilai dasar dan tinggi, serta metode getBase() dan getHeight() untuk mengambil nilai dasar dan tinggi.
- Ini memberi Anda kontrol lebih besar atas akses ke variabel-variabel ini dan menghindari modifikasi langsung dari luar kelas.
- 3.
- Warisan: Kelas Segitiga, Kotak, dan Balok diturunkan dari kelas lain.
- Triangle dan Square adalah turunan dari kelas BangunDatar, sedangkan Beam adalah turunan dari kelas Triangle dan juga mengimplementasikan antarmuka BangunRuang.
- Ini menunjukkan cara menggunakan warisan untuk mewarisi properti dan perilaku dari kelas lain.
- 4.
- Antarmuka: Antarmuka Space Build digunakan untuk mewakili bentuk spasial dengan metode calculVolume().
- Kelas Beam mengimplementasikan antarmuka ini dengan menghitung volume balok.
- Hal ini menunjukkan bahwa antarmuka digunakan untuk membuat kontrak yang harus diikuti oleh kelas yang mengimplementasikan antarmuka.
- Konsep-konsep ini membuat program Anda lebih terstruktur, lebih aman, dan lebih mudah dipahami.
- Konsep-konsep ini merupakan bagian penting dari pemrograman berorientasi objek dan memungkinkan Anda membuat aplikasi yang terukur dan mudah dikelola.
+Program ini adalah contoh implementasi konsep pewarisan (inheritance) dan polimorfisme dalam pemrograman berorientasi objek menggunakan bahasa pemrograman Java. Tujuan utama dari program ini adalah untuk menunjukkan bagaimana kita dapat menggunakan hierarki kelas dan implementasi interface untuk merepresentasikan objek-objek dengan sifat yang sama.
 
+Deskripsi singkat tentang elemen-elemen program:
+
+1. Interface AlatMusik: Ini adalah kontrak yang menyatakan bahwa setiap kelas yang mengimplementasikan interface ini harus memiliki metode `mainkan()`.
+
+2. Abstract class AlatMusikGesek: Ini adalah kelas abstrak yang mengimplementasikan interface `AlatMusik` dan menyediakan implementasi untuk alat musik yang digesek. Kelas turunan dari `AlatMusikGesek` harus mengimplementasikan metode `gesek()`.
+
+3. Class Biola: Ini adalah turunan dari `AlatMusikGesek` yang mewakili sebuah biola. Biola adalah alat musik gesek, jadi ia memiliki metode `gesek()`. Biola juga memiliki metode `mainkan()` yang diwarisi dari `AlatMusik`.
+
+4. Class Drum: Ini adalah kelas yang mewakili sebuah drum. Drum adalah alat musik yang tidak perlu digesek, jadi tidak ada metode `gesek()` di sini. Drum hanya perlu mengimplementasikan metode `mainkan()` dari interface `AlatMusik`.
+
+5. Class Suling: Ini adalah kelas yang mewakili sebuah suling. Suling adalah alat musik yang dimainkan dengan cara meniup, sehingga tidak ada metode `gesek()`. Suling hanya perlu mengimplementasikan metode `mainkan()` dari interface `AlatMusik`.
+
+6. Class Main: Ini adalah kelas utama program. Di dalamnya, kita membuat objek dari masing-masing kelas alat musik dan memanggil metode `mainkan()` untuk memainkan alat musik tersebut.
+
+Program ini menunjukkan fleksibilitas dan reusable code yang diperoleh dari menggunakan konsep pewarisan dan polimorfisme dalam pemrograman berorientasi objek. Dengan hierarki kelas yang tepat dan implementasi interface, kita dapat membuat kode yang mudah dipahami, dikelola, dan diperluas.
